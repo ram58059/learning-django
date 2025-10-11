@@ -2,6 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from .forms import GeeksForm
 from .models import Geekmodels
+from django.views.generic.list import ListView
 
 # Create your views here.
 def create_view(request):
@@ -52,3 +53,5 @@ def delete_view(request, id):
         return HttpResponseRedirect("/")
 
     return render(request, "delete_view.html", context)
+class GeeksList(ListView):
+    model = Geekmodels
