@@ -4,7 +4,7 @@ from .forms import GeeksForm
 from .models import Geekmodels
 from django.views.generic.list import ListView
 
-# Create your views here.
+# Create your views here
 def create_view(request):
     context = {}
 
